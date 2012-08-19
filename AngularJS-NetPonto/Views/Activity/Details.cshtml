@@ -1,0 +1,51 @@
+﻿@model AngularJS_NetPonto.Models.Activity
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Activity</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.description)
+    </div>
+    <div class="display-label">
+        @Html.LabelFor(model => model.ActivitiesProcesses)
+    </div>
+    <div class="display-field">
+        <table>
+            <tr>
+                <th>Acronym</th>
+                <th>Name</th>
+            </tr>
+            @foreach (var item in Model.ActivitiesProcesses)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Process.acronym)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Process.name)
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.ActivityID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
