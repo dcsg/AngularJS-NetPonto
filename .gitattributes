@@ -17,4 +17,5 @@
 *.gif binary
 *.ico binary
 
-core.autocrlf = true
+[core]
+	autocrlf = true
