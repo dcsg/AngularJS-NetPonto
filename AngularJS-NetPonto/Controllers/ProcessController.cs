@@ -22,6 +22,8 @@ namespace AngularJS_NetPonto.Controllers
             return View(db.Processes.ToList());
         }
 
+
+
         //
         // GET: /Process/Details/5
 
