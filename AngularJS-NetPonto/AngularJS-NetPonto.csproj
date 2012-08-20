@@ -132,6 +132,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Content Include="Content\teste.html" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ActivityController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -178,6 +179,13 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <None Include="Scripts\jquery-1.6.2-vsdoc.js" />
+    <Content Include="Scripts\AngularJS\angular-1.0.1.js" />
+    <Content Include="Scripts\AngularJS\angular-bootstrap-1.0.1.js" />
+    <Content Include="Scripts\AngularJS\angular-bootstrap-prettify-1.0.1.js" />
+    <Content Include="Scripts\AngularJS\angular-cookies-1.0.1.js" />
+    <Content Include="Scripts\AngularJS\angular-loader-1.0.1.js" />
+    <Content Include="Scripts\AngularJS\angular-resource-1.0.1.js" />
+    <Content Include="Scripts\AngularJS\angular-sanitize-1.0.1.js" />
     <Content Include="Scripts\jquery-1.6.2.js" />
     <Content Include="Scripts\jquery-1.6.2.min.js">
       <DependentUpon>jquery-1.6.2.js</DependentUpon>
@@ -187,21 +195,10 @@
     <Content Include="Scripts\jquery-ui-1.8.11.min.js">
       <DependentUpon>jquery-ui-1.8.11.js</DependentUpon>
     </Content>
-    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
-    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js">
-      <DependentUpon>jquery.unobtrusive-ajax.js</DependentUpon>
-    </Content>
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js">
       <DependentUpon>jquery.validate.js</DependentUpon>
     </Content>
-    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.min.js">
-      <DependentUpon>jquery.validate.unobtrusive.js</DependentUpon>
-    </Content>
-    <Content Include="Scripts\knockout-2.0.0.debug.js" />
-    <Content Include="Scripts\knockout-2.0.0.js" />
-    <Content Include="Scripts\modernizr-2.0.6-development-only.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -242,19 +239,10 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Web.config" />
-    <Content Include="Views\Process\Index.cshtml" />
-    <Content Include="Views\Process\Details.cshtml" />
-    <Content Include="Views\Process\Create.cshtml" />
-    <Content Include="Views\Process\Edit.cshtml" />
-    <Content Include="Views\Process\Delete.cshtml" />
-    <Content Include="Views\Activity\Index.cshtml" />
-    <Content Include="Views\Activity\Details.cshtml" />
-    <Content Include="Views\Activity\Create.cshtml" />
-    <Content Include="Views\Activity\Edit.cshtml" />
-    <Content Include="Views\Activity\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\App\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

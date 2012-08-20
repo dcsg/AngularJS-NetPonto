@@ -14,16 +14,10 @@ namespace AngularJS_NetPonto
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
-            routes.MapHttpRoute(
-                name: "DefaultApi",
-                routeTemplate: "api/{controller}/{id}",
-                defaults: new { id = RouteParameter.Optional }
-            );
-
             routes.MapRoute(
-                name: "Default",
-                url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                name: "API",
+                url: "api/{controller}/{action}/{id}",
+                defaults: new { id = UrlParameter.Optional }
             );
         }
     }
