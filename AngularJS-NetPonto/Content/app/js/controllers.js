@@ -22,9 +22,8 @@ function FiltrosCtrl($scope) {
 }
 
 function EscopoCtrl($scope) {
-    $scope.texto = "Controller Escopo";
-
-    $scope.$on('Event', function (event) {
-        $scope.texto = event.currentScope.texto;
+    $scope.texto = "Olá ";
+    $scope.$on('Event', function (scope, texto) {
+        $scope.texto = texto;
     });
 }

@@ -1,8 +1,16 @@
 ﻿<div ng-controller="EscopoCtrl">
-    First Scope: {{texto}}
+    Escopo Inicial: {{texto}}
+    <hr />
+
     <div ng-controller="EscopoCtrl">
         <input type="text" ng-model="texto"/><br />
-        Last Scope: {{texto}}<br />
-        <button type="button" ng-click="$emit('Event')" >Emitir</button>
+        Escopo do meio: {{texto}}<br />
+        <button type="button" ng-click="$emit('Event', texto)" >Emitir</button>
+        <button type="button" ng-click="$broadcast('Event', texto)" >Difundir</button>
+        
+        <hr />
+        <div ng-controller="EscopoCtrl">
+            Escopo do meio: {{texto}}<br />
+        </div>
     </div>
 </div>
