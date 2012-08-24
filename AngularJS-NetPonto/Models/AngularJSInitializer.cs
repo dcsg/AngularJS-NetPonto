@@ -7,9 +7,9 @@ using AngularJS_NetPonto.Models;
 
 namespace AngularJS_NetPonto.DAL
 {
-    public class AngularJSInitializer : DropCreateDatabaseIfModelChanges<AngularJSContext>
+    public class AngularJSInitializer : DropCreateDatabaseIfModelChanges<AngularJS_NetPontoContext>
     {
-        protected override void Seed(AngularJSContext context)
+        protected override void Seed(AngularJS_NetPontoContext context)
         {
             var processes = new List<Process>
             {
@@ -44,7 +44,7 @@ namespace AngularJS_NetPonto.DAL
                 new ActivityProcess { ProcessID = 4, ActivityID = 1 },
                 new ActivityProcess { ProcessID = 4, ActivityID = 2 }
             };
-            activitiesProcesses.ForEach(s => context.ActivitiesProcesses.Add(s));
+            activitiesProcesses.ForEach(s => context.ActivityProcesses.Add(s));
             context.SaveChanges();
         }
     }

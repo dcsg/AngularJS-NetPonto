@@ -22,13 +22,16 @@ namespace AngularJS_NetPonto
     {
         protected void Application_Start()
         {
-            Database.SetInitializer<AngularJSContext>(new AngularJSInitializer());
-
             AreaRegistration.RegisterAllAreas();
 
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            Database.SetInitializer<AngularJS_NetPontoContext>(new AngularJSInitializer());
+
+            ApiConfig.ConfigureApi(GlobalConfiguration.Configuration);
+
         }
     }
 }

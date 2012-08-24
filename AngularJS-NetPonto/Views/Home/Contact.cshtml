@@ -2,49 +2,63 @@
     ViewBag.Title = "Contact";
 }
 
-<hgroup class="title">
-    <h1>@ViewBag.Title.</h1>
-    <h2>@ViewBag.Message</h2>
-</hgroup>
+ <div class="row">
+        <div class="span12 home" ng-controller="HomeListCtrl">
+            <div class="row-fluid">
+                <div class="span4">
+                    <div class="placeholder info-proce">
+                        <h4>Processos</h4>
+                        <div>
+                            <input type="text" ng-model="search" class="search-query" placeholder="Procurar" style="width:85%; color: black;"/>
+                        </div>
+                        <div>              
+                            <table class="table table-striped table-bordered table-condensed">
+                                <thead>
+                                    <tr>
+                                        <th width="67%">Processo</th>
+                                        <th width="23%">Sigla</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr ng-repeat="processo in processos | filter:search | orderBy:'nome'"  >
+                                        <td>
+                                            <a href="#!/processo/{{processo.id}}" title="{{processo.nome}}">{{processo.nome|truncate:20}}</a>
+                                        </td>
+                                        <td>{{processo.sigla}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3">
+                                            <a href=""><img src="@Url.Content("~/Content/img/icons/star.png")" /> Ver favoritos </a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <a href="">Ver mapa geral de processos [+]</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="span8" ng-model="processo">
+                    <div class="detail-proce placeholder detail-proce" ng-view>
 
-<section class="contact">
-    <header>
-        <h3>Phone</h3>
-    </header>
-    <p>
-        <span class="label">Main:</span>
-        <span>425.555.0100</span>
-    </p>
-    <p>
-        <span class="label">After Hours:</span>
-        <span>425.555.0199</span>
-    </p>
-</section>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-<section class="contact">
-    <header>
-        <h3>Email</h3>
-    </header>
-    <p>
-        <span class="label">Support:</span>
-        <span><a href="mailto:Support@example.com">Support@example.com</a></span>
-    </p>
-    <p>
-        <span class="label">Marketing:</span>
-        <span><a href="mailto:Marketing@example.com">Marketing@example.com</a></span>
-    </p>
-    <p>
-        <span class="label">General:</span>
-        <span><a href="mailto:General@example.com">General@example.com</a></span>
-    </p>
-</section>
+        <!-- CACHED: detail.html --> 
+        <script type="text/ng-template" id="detail.html">
+            <div  ng-show="processo">
+                <h4>{{processo.nome}}</h4>
+                <div>
+                    <h6>Objectivo</h6>
+                    <p ng-bind-html-unsafe="processo.desc|newline"></p>
+                </div>
+                <div><p><b class="blue">Responsável:</b> {{processo.resp}}</p></div>
+                <div><p><b class="blue">Última alteração:</b> {{processo.dtalt | truncate:10:""}}</p></div>
+                <div class="pull-right">
+                    <a href="/processo/{{processo.id}}/atividades" class="btn">Ver +</a>
+                </div>
+            </div>
+        </script>
 
-<section class="contact">
-    <header>
-        <h3>Address</h3>
-    </header>
-    <p>
-        One Microsoft Way<br />
-        Redmond, WA 98052-6399
-    </p>
-</section>
+    </div>

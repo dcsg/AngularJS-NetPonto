@@ -8,7 +8,7 @@ namespace AngularJS_NetPonto.Models
 {
     public class ActivityProcess
     {
-        [Required]
+        [ScaffoldColumn(false)]
         public int id { get; set; }
 
         [Required]

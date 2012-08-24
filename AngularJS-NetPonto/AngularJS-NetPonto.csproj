@@ -129,26 +129,36 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\ApiConfig.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Content Include="Content\teste.html" />
+    <Content Include="Content\app\partials\process\create.html" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\ActivityController.cs" />
+    <Compile Include="Controllers\ActivitiesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\ProcessController.cs" />
-    <Compile Include="DAL\AngularJSContext.cs" />
-    <Compile Include="DAL\AngularJSInitializer.cs" />
+    <Compile Include="Controllers\ProcessesController.cs" />
+    <Compile Include="Models\AngularJSInitializer.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\Activity.cs" />
     <Compile Include="Models\ActivityProcess.cs" />
+    <Compile Include="Models\AngularJS_NetPontoContext.cs" />
     <Compile Include="Models\Process.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\app\js\app.js" />
+    <Content Include="Content\app\js\controllers.js" />
+    <Content Include="Content\app\js\filters.js" />
+    <Content Include="Content\app\js\resources.js" />
+    <Content Include="Content\app\partials\process\show.html" />
+    <Content Include="Content\app\partials\home.html" />
+    <Content Include="Content\css\twitter.bootstrap.css" />
+    <Content Include="Content\img\TwitterBootstrap\glyphicons-halflings-white.png" />
+    <Content Include="Content\img\TwitterBootstrap\glyphicons-halflings.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -186,6 +196,10 @@
     <Content Include="Scripts\AngularJS\angular-loader-1.0.1.js" />
     <Content Include="Scripts\AngularJS\angular-resource-1.0.1.js" />
     <Content Include="Scripts\AngularJS\angular-sanitize-1.0.1.js" />
+    <Content Include="Scripts\jquery-1.8.0.js" />
+    <Content Include="Scripts\Copy of jquery-1.6.2.min.js">
+      <DependentUpon>jquery-1.8.0.js</DependentUpon>
+    </Content>
     <Content Include="Scripts\jquery-1.6.2.js" />
     <Content Include="Scripts\jquery-1.6.2.min.js">
       <DependentUpon>jquery-1.6.2.js</DependentUpon>
@@ -199,6 +213,8 @@
     <Content Include="Scripts\jquery.validate.min.js">
       <DependentUpon>jquery.validate.js</DependentUpon>
     </Content>
+    <Content Include="Scripts\TwitterBootstrap\bootstrap.js" />
+    <Content Include="Scripts\underscore.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -206,7 +222,7 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="Content\Site.css" />
+    <Content Include="Content\css\Site.css" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Images\accent.png" />
     <Content Include="Images\aspNetHome.png" />
@@ -242,7 +258,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\App\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
