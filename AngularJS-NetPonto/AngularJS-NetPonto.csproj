@@ -129,32 +129,21 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_Start\ApiConfig.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Content Include="Content\app\partials\process\create.html" />
-    <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\ActivitiesController.cs" />
+    <Content Include="Content\app\partials\expressoes.html" />
+    <Content Include="Content\app\partials\validacoes.html" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\ProcessesController.cs" />
-    <Compile Include="Models\AngularJSInitializer.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\AccountModels.cs" />
-    <Compile Include="Models\Activity.cs" />
-    <Compile Include="Models\ActivityProcess.cs" />
-    <Compile Include="Models\AngularJS_NetPontoContext.cs" />
-    <Compile Include="Models\Process.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\app\js\app.js" />
     <Content Include="Content\app\js\controllers.js" />
     <Content Include="Content\app\js\filters.js" />
-    <Content Include="Content\app\js\resources.js" />
-    <Content Include="Content\app\partials\process\show.html" />
     <Content Include="Content\app\partials\home.html" />
     <Content Include="Content\css\twitter.bootstrap.css" />
     <Content Include="Content\img\TwitterBootstrap\glyphicons-halflings-white.png" />
@@ -244,12 +233,6 @@
     <Content Include="Images\twitter.png" />
     <Content Include="Images\windowsLive.png" />
     <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Account\ChangePassword.cshtml" />
-    <Content Include="Views\Account\ChangePasswordSuccess.cshtml" />
-    <Content Include="Views\Account\Login.cshtml" />
-    <Content Include="Views\Account\Register.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
@@ -258,6 +241,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

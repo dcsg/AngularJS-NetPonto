@@ -1,50 +1,5 @@
-﻿<div class="row" ng-init="process=false">
-    <div class="span12 home">
-        <div class="row-fluid">
-            <div class="span4">
-                <div class="placeholder info-proce">
-                    <h4>Processes</h4>
-                    <div>
-                        <input type="text" ng-model="search" class="search-query" placeholder="Procurar" style="width: 85%; color: black;" />
-                    </div>
-                    <div >
-                        <table class="table table-striped table-bordered table-condensed">
-                            <thead>
-                                <tr>
-                                    <th width="23%">Acronym</th>
-                                    <th width="67%">Process</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr ng-repeat="process in processes | filter:search | orderBy:'name'">
-                                    <td>{{process.acronym}}</td>
-                                    <td>
-                                        <a href="" ng-click="show(process)" title="{{process.name}}">{{process.name|truncate:20}}</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2">
-                                        <a href="#!/process/new ">Adicionar Processo</a>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-            <div class="span8">
-                <div ng-show="process">
-                    <h4>{{process.name}}</h4>
-                    <div>
-                        <p ng-bind-html-unsafe="process.description|newline"></p>
-                    </div>
-                    <div class="pull-right">
-                        <a href="#!/process/{{process.Id}}" class="btn">Show more</a>
-                    </div>
-                </div>
-                <div ng-hide="process">
-                    <h3>Escolha um processo da lista.</h3>
-                </div>
-            </div>
-        </div>
-    </div>
+﻿<div>
+    <a href="#!/expressoes">Expressões</a><br />
+    <a href="#!/validacoes">Validações</a><br />
+    <a href="#!/filtros">Filtros</a><br />
+</div>

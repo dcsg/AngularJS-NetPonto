@@ -19,11 +19,4 @@ angular.module('netpontoApp.filters', [])
             }
 
         }
-    })
-    .filter('newline', function () {
-        return function (text) {
-            if (text != undefined)
-                return text.replace(/\n/g, '<br/>');
-            return text;
-        }
     });

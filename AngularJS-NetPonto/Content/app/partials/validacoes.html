@@ -17,12 +17,19 @@
     <button ng-click="save()" ng-disabled="form.$invalid">Adicionar</button>
 </div>
 </form>
+
+<div><h2>Outputs:</h2>
+<div>
+    Processo = { sigla: {{process.acronym}}, nome:{{process.name}}, descricao: {{process.description}}}<br />
+    Formulário válido: {{form.$valid}}
+</div>
+</div>
  <style type="text/css">
-      .css-form input.ng-invalid.ng-dirty {
-        background-color: #FA787E;
-      }
+    .css-form input.ng-invalid.ng-dirty {
+    background-color: #FA787E;
+    }
     
-      .css-form input.ng-valid.ng-dirty {
-        background-color: #78FA89;
-      }
-    </style>
+    .css-form input.ng-valid.ng-dirty {
+    background-color: #78FA89;
+    }
+</style>

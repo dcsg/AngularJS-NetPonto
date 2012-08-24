@@ -27,8 +27,7 @@ namespace AngularJS_NetPonto
             bundles.Add(new ScriptBundle("~/bundles/netponto-app")
                         .Include("~/Content/app/js/app.js")
                         .Include("~/Content/app/js/controllers.js")
-                        .Include("~/Content/app/js/filters.js")
-                        .Include("~/Content/app/js/resources.js"));
+                        .Include("~/Content/app/js/filters.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/twitterbootstrap").Include(
                         "~/Scripts/TwitterBootstrap/bootstrap.js"));

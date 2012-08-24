@@ -1,7 +1,7 @@
 ﻿'use strict';
 
 var partialsDir = 'Content/app/partials/';
-angular.module('netpontoApp', ['netpontoApp.filters', 'netpontoApp.API'])
+angular.module('netpontoApp', ['netpontoApp.filters'])
         .config(function ($routeProvider, $locationProvider) {
 
             //Adds the prefix '!' to the url
@@ -10,9 +10,9 @@ angular.module('netpontoApp', ['netpontoApp.filters', 'netpontoApp.API'])
 
             //routes
             $routeProvider
-              .when('/', { controller: HomeCtrl, templateUrl: partialsDir + 'home.html' })
-              .when('/process/new', { controller: ProcessNewCtrl, templateUrl: partialsDir + 'process/create.html' })
-              .when('/process/:id', { controller: ProcessCtrl, templateUrl: partialsDir + 'process/show.html' })
+              .when('/',            { controller: HomeCtrl,         templateUrl: partialsDir + 'home.html' })
+              .when('/expressoes',  { controller: ExpressoesCtrl,   templateUrl: partialsDir + 'expressoes.html' })
+              .when('/validacoes',  { controller: ValidacoesCtrl,   templateUrl: partialsDir + 'validacoes.html' })
+              .when('/filtros',     { controller: FiltrosCtrl,      templateUrl: partialsDir + 'filtros.html' })
               .otherwise({ redirectTo: '/' });
         });
-//templateUrl: partialsDir+'process/show.html'
