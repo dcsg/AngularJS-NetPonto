@@ -14,5 +14,6 @@ angular.module('netpontoApp', ['netpontoApp.filters'])
               .when('/expressoes',  { controller: ExpressoesCtrl,   templateUrl: partialsDir + 'expressoes.html' })
               .when('/validacoes',  { controller: ValidacoesCtrl,   templateUrl: partialsDir + 'validacoes.html' })
               .when('/filtros',     { controller: FiltrosCtrl,      templateUrl: partialsDir + 'filtros.html' })
+              .when('/escopo',      { controller: EscopoCtrl,       templateUrl: partialsDir + 'escopo.html' })
               .otherwise({ redirectTo: '/' });
         });

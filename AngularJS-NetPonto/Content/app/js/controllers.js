@@ -11,8 +11,20 @@ function ValidacoesCtrl($scope) {
     $scope.save = function () {
         console.log($scope.process);
     }
+
+    $scope.reset = function () {
+        $scope.process = {};
+    }
 }
 
 function FiltrosCtrl($scope) {
     $scope.texto = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec massa est, adipiscing quis feugiat quis.";
+}
+
+function EscopoCtrl($scope) {
+    $scope.texto = "Controller Escopo";
+
+    $scope.$on('Event', function (event) {
+        $scope.texto = event.currentScope.texto;
+    });
 }

@@ -1,0 +1,8 @@
+﻿<div ng-controller="EscopoCtrl">
+    First Scope: {{texto}}
+    <div ng-controller="EscopoCtrl">
+        <input type="text" ng-model="texto"/><br />
+        Last Scope: {{texto}}<br />
+        <button type="button" ng-click="$emit('Event')" >Emitir</button>
+    </div>
+</div>
