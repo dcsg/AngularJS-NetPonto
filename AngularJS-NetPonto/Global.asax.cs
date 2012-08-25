@@ -10,7 +10,6 @@ using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
 using AngularJS_NetPonto.Models;
-using AngularJS_NetPonto.DAL;
 using System.Data.Entity;
 
 namespace AngularJS_NetPonto

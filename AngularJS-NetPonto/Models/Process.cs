@@ -18,8 +18,5 @@ namespace AngularJS_NetPonto.Models
 
         [Required]
         public string acronym { get; set; }
-
-        // Navigation property
-        public ICollection<ActivityProcess> ActivityProcesses { get; set; }
     }
 }

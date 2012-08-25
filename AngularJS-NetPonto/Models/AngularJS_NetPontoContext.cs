@@ -18,7 +18,5 @@ namespace AngularJS_NetPonto.Models
         }
 
         public DbSet<Process> Processes { get; set; }
-        public DbSet<Activity> Activities { get; set; }
-        public DbSet<ActivityProcess> ActivityProcesses { get; set; }
     }
 }

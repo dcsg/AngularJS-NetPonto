@@ -5,7 +5,7 @@ using System.Web;
 using System.Data.Entity;
 using AngularJS_NetPonto.Models;
 
-namespace AngularJS_NetPonto.DAL
+namespace AngularJS_NetPonto.Models
 {
     public class AngularJSInitializer : DropCreateDatabaseIfModelChanges<AngularJS_NetPontoContext>
     {
@@ -19,32 +19,6 @@ namespace AngularJS_NetPonto.DAL
                 new Process { name = "Gestão de Projectos", description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec nisi elit. Sed ante purus.",                          acronym = "GP" }
             };
             processes.ForEach(s => context.Processes.Add(s));
-            context.SaveChanges();
-
-            var activities = new List<Activity>
-            {
-                new Activity { name = "Implementação",      description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec massa est, adipiscing quis feugiat quis.", },
-                new Activity { name = "Desenvolvimento",    description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec massa est, adipiscing quis feugiat quis.", },
-                new Activity { name = "Brainstorm",         description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec massa est, adipiscing quis feugiat quis.", },
-                new Activity { name = "Conceção",           description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec massa est, adipiscing quis feugiat quis.", },
-                new Activity { name = "Projecto",           description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec massa est, adipiscing quis feugiat quis.", }
-            };
-            activities.ForEach(s => context.Activities.Add(s));
-            context.SaveChanges();
-
-            var activitiesProcesses = new List<ActivityProcess>
-            {
-                new ActivityProcess { ProcessID = 1, ActivityID = 1 },
-                new ActivityProcess { ProcessID = 1, ActivityID = 2 },
-                new ActivityProcess { ProcessID = 1, ActivityID = 3 },
-                new ActivityProcess { ProcessID = 2, ActivityID = 4 },
-                new ActivityProcess { ProcessID = 2, ActivityID = 3 },
-                new ActivityProcess { ProcessID = 2, ActivityID = 2 },
-                new ActivityProcess { ProcessID = 3, ActivityID = 1 },
-                new ActivityProcess { ProcessID = 4, ActivityID = 1 },
-                new ActivityProcess { ProcessID = 4, ActivityID = 2 }
-            };
-            activitiesProcesses.ForEach(s => context.ActivityProcesses.Add(s));
             context.SaveChanges();
         }
     }

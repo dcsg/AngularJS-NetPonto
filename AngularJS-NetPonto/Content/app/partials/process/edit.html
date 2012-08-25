@@ -1,0 +1,29 @@
+﻿<form name="form" novalidate class="css-form">
+<div>
+    Sigla:
+    <input type="text" name="process.acronym" ng-model="process.acronym" ng-minlength="2" ng-maxlength="3" required />
+</div>
+<div>
+    Nome:
+    <input type="text" name="process.name" ng-model="process.name" ng-minlength="4" ng-maxlength="100" required />
+</div>
+<div>
+    Descrição:
+    <textarea type="text" name="process.description" ng-model="process.description">
+    </textarea>
+</div>
+<div>
+    <button ng-click="reset()">Limpar</button>
+    <button ng-click="delete(process)">Apagar</button>
+    <button ng-click="update(process)" ng-disabled="form.$invalid">Atualizar</button>
+</div>
+</form>
+ <style type="text/css">
+      .css-form input.ng-invalid.ng-dirty {
+        background-color: #FA787E;
+      }
+    
+      .css-form input.ng-valid.ng-dirty {
+        background-color: #78FA89;
+      }
+    </style>
