@@ -8,6 +8,7 @@
 *.com
 *.class
 *.dll
+!AngularJS-NetPonto/bin/*.dll
 *.exe
 *.pdb
 *.dll.config
@@ -26,6 +27,7 @@ _UpgradeReport_Files/
 # Directories #
 ###############
 bin/
+!AngularJS-NetPonto/bin
 obj/
 TestResults/
 ###################
@@ -55,6 +57,9 @@ TestResults/
 ######################
 *.log
 *.sqlite
+*.mdf
+*.sdf
+*.ldf
 # OS generated files #
 ######################
 .DS_Store?

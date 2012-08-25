@@ -8,7 +8,7 @@ namespace AngularJS_NetPonto
         public static void RegisterBundles(BundleCollection bundles)
         {
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
-                        "~/Scripts/jquery-1.*"));
+                        "~/Scripts/jquery-1.8*"));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryui").Include(
                         "~/Scripts/jquery-ui*"));
@@ -20,7 +20,22 @@ namespace AngularJS_NetPonto
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                         "~/Scripts/modernizr-*"));
 
-            bundles.Add(new StyleBundle("~/Content/css").Include("~/Content/site.css"));
+            bundles.Add(new ScriptBundle("~/bundles/angular")
+                        .Include("~/Scripts/AngularJS/angular*")
+                        .Include("~/Scripts/underscore*"));
+
+            bundles.Add(new ScriptBundle("~/bundles/netponto-app")
+                        .Include("~/Content/app/js/app.js")
+                        .Include("~/Content/app/js/controllers.js")
+                        .Include("~/Content/app/js/filters.js")
+                        .Include("~/Content/app/js/resources.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/twitterbootstrap").Include(
+                        "~/Scripts/TwitterBootstrap/bootstrap.js"));
+
+            bundles.Add(new StyleBundle("~/Content/css")
+                        .Include("~/Content/Site.css")
+                        .Include("~/Content/twitter.bootstrap.css"));
 
             bundles.Add(new StyleBundle("~/Content/themes/base/css").Include(
                         "~/Content/themes/base/jquery.ui.core.css",
@@ -35,6 +50,7 @@ namespace AngularJS_NetPonto
                         "~/Content/themes/base/jquery.ui.datepicker.css",
                         "~/Content/themes/base/jquery.ui.progressbar.css",
                         "~/Content/themes/base/jquery.ui.theme.css"));
+            
         }
     }
 }

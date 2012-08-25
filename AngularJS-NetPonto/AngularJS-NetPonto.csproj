@@ -132,18 +132,13 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\ActivityController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\ProcessController.cs" />
-    <Compile Include="DAL\AngularJSContext.cs" />
-    <Compile Include="DAL\AngularJSInitializer.cs" />
+    <Compile Include="Controllers\ProcessesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\AccountModels.cs" />
-    <Compile Include="Models\Activity.cs" />
-    <Compile Include="Models\ActivityProcess.cs" />
+    <Compile Include="Models\AngularJSInitializer.cs" />
+    <Compile Include="Models\AngularJS_NetPontoContext.cs" />
     <Compile Include="Models\Process.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -178,11 +173,20 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <None Include="Scripts\jquery-1.6.2-vsdoc.js" />
+    <Content Include="Scripts\AngularJS\angular-1.0.1.js" />
+    <Content Include="Scripts\AngularJS\angular-bootstrap-1.0.1.js" />
+    <Content Include="Scripts\AngularJS\angular-bootstrap-prettify-1.0.1.js" />
+    <Content Include="Scripts\AngularJS\angular-cookies-1.0.1.js" />
+    <Content Include="Scripts\AngularJS\angular-loader-1.0.1.js" />
+    <Content Include="Scripts\AngularJS\angular-resource-1.0.1.js" />
+    <Content Include="Scripts\AngularJS\angular-sanitize-1.0.1.js" />
+    <Content Include="Scripts\TwitterBootstrap\bootstrap.js" />
     <Content Include="Scripts\jquery-1.6.2.js" />
     <Content Include="Scripts\jquery-1.6.2.min.js">
       <DependentUpon>jquery-1.6.2.js</DependentUpon>
     </Content>
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.8.0.js" />
     <Content Include="Scripts\jquery-ui-1.8.11.js" />
     <Content Include="Scripts\jquery-ui-1.8.11.min.js">
       <DependentUpon>jquery-ui-1.8.11.js</DependentUpon>
@@ -202,6 +206,7 @@
     <Content Include="Scripts\knockout-2.0.0.debug.js" />
     <Content Include="Scripts\knockout-2.0.0.js" />
     <Content Include="Scripts\modernizr-2.0.6-development-only.js" />
+    <Content Include="Scripts\underscore.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -231,27 +236,15 @@
     <Content Include="Images\twitter.png" />
     <Content Include="Images\windowsLive.png" />
     <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Account\ChangePassword.cshtml" />
-    <Content Include="Views\Account\ChangePasswordSuccess.cshtml" />
-    <Content Include="Views\Account\Login.cshtml" />
-    <Content Include="Views\Account\Register.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
-    <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Web.config" />
-    <Content Include="Views\Process\Index.cshtml" />
-    <Content Include="Views\Process\Details.cshtml" />
-    <Content Include="Views\Process\Create.cshtml" />
-    <Content Include="Views\Process\Edit.cshtml" />
-    <Content Include="Views\Process\Delete.cshtml" />
-    <Content Include="Views\Activity\Index.cshtml" />
-    <Content Include="Views\Activity\Details.cshtml" />
-    <Content Include="Views\Activity\Create.cshtml" />
-    <Content Include="Views\Activity\Edit.cshtml" />
-    <Content Include="Views\Activity\Delete.cshtml" />
+    <Content Include="Views\Processes\Index.cshtml" />
+    <Content Include="Views\Processes\Details.cshtml" />
+    <Content Include="Views\Processes\Create.cshtml" />
+    <Content Include="Views\Processes\Edit.cshtml" />
+    <Content Include="Views\Processes\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
