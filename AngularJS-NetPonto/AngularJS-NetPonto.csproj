@@ -132,6 +132,8 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Content Include="Content\app\partials\escopo.html" />
+    <Content Include="Content\app\partials\filtros.html" />
     <Content Include="Content\app\partials\expressoes.html" />
     <Content Include="Content\app\partials\validacoes.html" />
     <Compile Include="Controllers\HomeController.cs" />

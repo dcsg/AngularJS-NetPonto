@@ -1,9 +1,10 @@
 ﻿<div ng-controller="EscopoCtrl">
-    Escopo Inicial: {{texto}}
+    Escopo Inicial: {{texto}}<br />
     <hr />
 
     <div ng-controller="EscopoCtrl">
         <input type="text" ng-model="texto"/><br />
+
         Escopo do meio: {{texto}}<br />
         <button type="button" ng-click="$emit('Event', texto)" >Emitir</button>
         <button type="button" ng-click="$broadcast('Event', texto)" >Difundir</button>

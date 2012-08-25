@@ -22,7 +22,11 @@ function FiltrosCtrl($scope) {
 }
 
 function EscopoCtrl($scope) {
-    $scope.texto = "Olá ";
+    $scope.texto = 'Olá ';
+    $scope.$watch('texto', function (newValue, oldValue) {
+        $scope.$emit('Event', newValue);
+        $scope.$broadcast('Event', newValue);
+    });
     $scope.$on('Event', function (scope, texto) {
         $scope.texto = texto;
     });
