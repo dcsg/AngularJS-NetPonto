@@ -8,4 +8,4 @@ Este repositório contém três branches com o código das demonstrações que f
 * AngularJS SPA (branch: [angularMVC](https://github.com/danielcsgomes/AngularJS-NetPonto) )
 
 ## Licença
-Este código está licenciado pela [Licença do MIT](https://github.com/danielcsgomes/AngularJS-NetPonto/blob/master/LICENSE)
+Este código está licenciado pela [Licença do MIT](https://github.com/danielcsgomes/AngularJS-NetPonto/blob/angularMVC/LICENSE)
