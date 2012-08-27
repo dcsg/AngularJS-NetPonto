@@ -1,10 +1,10 @@
 AngularJS com ASP.NET MVC 4 [![endorse](http://api.coderwall.com/danielcsgomes/endorsecount.png)](http://coderwall.com/danielcsgomes)
 =======================================
 
-Este repositório contém três branches com o código das demonstrações que fiz na minha apresentação no 32º meeting do NetPonto.
+Este repositï¿½rio contï¿½m trï¿½s branches com o cï¿½digo das demonstraï¿½ï¿½es que fiz na minha apresentaï¿½ï¿½o no 32ï¿½ meeting do NetPonto.
 
-* AngularJS - Básicos (branch: [angularJS-Basics] (https://github.com/danielcsgomes/AngularJS-NetPonto/tree/angularJS-Basics) )
-* AngularJS em Páginas Dinâmicas (branch: [without-angular] (https://github.com/danielcsgomes/AngularJS-NetPonto/tree/without-angular))
+* AngularJS - Bï¿½sicos (branch: [angularJS-Basics] (https://github.com/danielcsgomes/AngularJS-NetPonto/tree/angularJS-Basics) )
+* AngularJS em Pï¿½ginas Dinï¿½micas (branch: [without-angular] (https://github.com/danielcsgomes/AngularJS-NetPonto/tree/without-angular))
 * AngularJS SPA (branch: [angularMVC](https://github.com/danielcsgomes/AngularJS-NetPonto) )
 
 ## License
