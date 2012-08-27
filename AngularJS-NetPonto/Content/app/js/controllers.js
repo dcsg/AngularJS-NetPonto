@@ -5,7 +5,7 @@ function HomeCtrl($scope) {
 
 function ExpressoesCtrl($scope) {
     $scope.utilizador = { nome: "NetPonto" };
-}
+}   
 
 function ValidacoesCtrl($scope) {
     $scope.save = function () {
