@@ -9,37 +9,48 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table>
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.name)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.description)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.acronym)
-        </th>
-        <th></th>
-    </tr>
+<div ng-app="netpontoApp" ng-controller="ProcessCtrl" >
+    <input type="text" ng-model="search.$" />
+    <input type="text" ng-model="search.name" />
+    <input type="text" ng-model="search.description" />
+    <table>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.acronym)
+            </th>
+            <th></th>
+        </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.description)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.acronym)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
-        </td>
-    </tr>
-}
+        <tr ng-repeat="process in processes | filter: search | orderBy:'name'">
+            <td>
+                {{process.name}}
+            </td>
+            <td>
+                {{process.description}}
+            </td>
+            <td>
+                {{process.acronym}}
+            </td>
+            <td>
+                <a href="/Processes/Edit/{{process.Id}}" >Editar</a>
+            </td>
+        </tr>
 
-</table>
+    </table>
+</div>
+<script type="text/javascript">
+    angular.module('netpontoApp', ['ngResource']);
+
+    function ProcessCtrl($scope, $resource) {
+        $scope.processes =
+            $resource("/Processes/GetProcesses", [],
+            { query: { method: 'GET', isArray: true } }).query();
+    }
+
+</script>

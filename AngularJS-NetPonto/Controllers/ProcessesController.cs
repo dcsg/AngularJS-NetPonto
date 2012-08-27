@@ -21,6 +21,11 @@ namespace AngularJS_NetPonto.Controllers
             return View(db.Processes.ToList());
         }
 
+        public JsonResult GetProcesses()
+        {
+            return Json(db.Processes.AsEnumerable(), JsonRequestBehavior.AllowGet);
+        }
+
         //
         // GET: /Processes/Details/5
 
