@@ -2,20 +2,17 @@
 <html lang="en" ng-app="netpontoApp">
     <head>
         <meta charset="utf-8" />
-        <title>AngularJS - NetPonto</title>
+        <title>AngularJS SPA - NetPonto</title>
         <meta name="viewport" content="width=device-width" />
 
         <script async="" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 
         @Styles.Render("~/Content/css", "~/Content/themes/base/css")
-        @*Scripts.Render("~/bundles/jquery","~/bundles/jqueryui","~/bundles/angular","~/bundles/netponto-app", "~/bundles/twitterbootstrap")*@
-        @Scripts.Render("~/bundles/angular","~/bundles/netponto-app", "~/bundles/twitterbootstrap")
         <style>
             body {
                 padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
             }
         </style>
-
     </head>
     <body>
         <div class="navbar navbar-fixed-top">
@@ -42,3 +39,5 @@
         </div> <!-- /container -->
     </body>
 </html>
+
+@Scripts.Render("~/bundles/angular","~/bundles/netponto-app", "~/bundles/twitterbootstrap")
