@@ -1,5 +1,7 @@
-AngularJS com ASP.NET MVC 4 [![endorse](http://api.coderwall.com/danielcsgomes/endorsecount.png)](http://coderwall.com/danielcsgomes)
-=======================================
+AngularJS com ASP.NET MVC 4
+===========================
+
+[![endorse](https://api.coderwall.com/danielcsgomes/endorsecount.png)](https://coderwall.com/danielcsgomes)
 
 Este repositório contém três branches com o código das demonstrações que fiz na minha apresentação no 32º meeting do NetPonto.
 
