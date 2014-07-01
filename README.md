@@ -7,7 +7,7 @@ Este repositório contém três branches com o código das demonstrações que f
 
 * AngularJS - Básicos (branch: [angularJS-Basics] (https://github.com/danielcsgomes/AngularJS-NetPonto/tree/angularJS-Basics) )
 * AngularJS em Páginas Dinâmicas (branch: [without-angular] (https://github.com/danielcsgomes/AngularJS-NetPonto/tree/without-angular))
-* AngularJS SPA (branch: [angularMVC](https://github.com/danielcsgomes/AngularJS-NetPonto) )
+* AngularJS SPA (branch: [angularMVC](https://github.com/dcsg/AngularJS-NetPonto) )
 
 ## Licença
-Este código está licenciado pela [Licença do MIT](https://github.com/danielcsgomes/AngularJS-NetPonto/blob/angularMVC/LICENSE)
+Este código está licenciado pela [Licença do MIT](https://github.com/dcsg/AngularJS-NetPonto/blob/angularMVC/LICENSE)
